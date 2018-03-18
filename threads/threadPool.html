@@ -1421,7 +1421,63 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h2 id="&#x7EBF;&#x7A0B;&#x6C60;&#x7684;&#x4F7F;&#x7528;&#x548C;&#x539F;&#x7406;">&#x7EBF;&#x7A0B;&#x6C60;&#x7684;&#x4F7F;&#x7528;&#x548C;&#x539F;&#x7406;</h2>
+<ol>
+<li><p>corePoolSize&#xFF1A;&#x7EBF;&#x7A0B;&#x6C60;&#x4E2D;&#x7684;&#x6838;&#x5FC3;&#x7EBF;&#x7A0B;&#x6570;&#xFF0C;&#x5F53;&#x63D0;&#x4EA4;&#x4E00;&#x4E2A;&#x4EFB;&#x52A1;&#x65F6;&#xFF0C;&#x7EBF;&#x7A0B;&#x6C60;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7EBF;&#x7A0B;&#x6267;&#x884C;&#x4EFB;&#x52A1;&#xFF0C;&#x76F4;&#x5230;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x6570;&#x7B49;&#x4E8E;corePoolSize&#xFF1B;
+&#x5982;&#x679C;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x6570;&#x4E3A;corePoolSize&#xFF0C;&#x7EE7;&#x7EED;&#x63D0;&#x4EA4;&#x7684;&#x4EFB;&#x52A1;&#x88AB;&#x4FDD;&#x5B58;&#x5230;&#x963B;&#x585E;&#x961F;&#x5217;&#x4E2D;&#xFF0C;&#x7B49;&#x5F85;&#x88AB;&#x6267;&#x884C;&#xFF1B;
+&#x5982;&#x679C;&#x6267;&#x884C;&#x4E86;&#x7EBF;&#x7A0B;&#x6C60;&#x7684;prestartAllCoreThreads()&#x65B9;&#x6CD5;&#xFF0C;&#x7EBF;&#x7A0B;&#x6C60;&#x4F1A;&#x63D0;&#x524D;&#x521B;&#x5EFA;&#x5E76;&#x542F;&#x52A8;&#x6240;&#x6709;&#x6838;&#x5FC3;&#x7EBF;&#x7A0B;&#x3002;</p>
+</li>
+<li><p>maximumPoolSize&#xFF1A;&#x7EBF;&#x7A0B;&#x6C60;&#x4E2D;&#x5141;&#x8BB8;&#x7684;&#x6700;&#x5927;&#x7EBF;&#x7A0B;&#x6570;&#x3002;&#x5982;&#x679C;&#x5F53;&#x524D;&#x963B;&#x585E;&#x961F;&#x5217;&#x6EE1;&#x4E86;&#xFF0C;&#x4E14;&#x7EE7;&#x7EED;&#x63D0;&#x4EA4;&#x4EFB;&#x52A1;&#xFF0C;&#x5219;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x7EBF;&#x7A0B;&#x6267;&#x884C;&#x4EFB;&#x52A1;&#xFF0C;&#x524D;&#x63D0;&#x662F;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x6570;&#x5C0F;&#x4E8E;maximumPoolSize</p>
+</li>
+<li><p>keepAliveTime&#xFF1A;&#x7EBF;&#x7A0B;&#x7A7A;&#x95F2;&#x65F6;&#x7684;&#x5B58;&#x6D3B;&#x65F6;&#x95F4;&#xFF0C;&#x5373;&#x5F53;&#x7EBF;&#x7A0B;&#x6CA1;&#x6709;&#x4EFB;&#x52A1;&#x6267;&#x884C;&#x65F6;&#xFF0C;&#x7EE7;&#x7EED;&#x5B58;&#x6D3B;&#x7684;&#x65F6;&#x95F4;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8BE5;&#x53C2;&#x6570;&#x53EA;&#x5728;&#x7EBF;&#x7A0B;&#x6570;&#x5927;&#x4E8E;corePoolSize&#x65F6;&#x624D;&#x6709;&#x7528;</p>
+</li>
+<li><p>workQueue&#xFF1A;&#x5FC5;&#x987B;&#x662F;BlockingQueue&#x963B;&#x585E;&#x961F;&#x5217;&#x3002;&#x5F53;&#x7EBF;&#x7A0B;&#x6C60;&#x4E2D;&#x7684;&#x7EBF;&#x7A0B;&#x6570;&#x8D85;&#x8FC7;&#x5B83;&#x7684;corePoolSize&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x7EBF;&#x7A0B;&#x4F1A;&#x8FDB;&#x5165;&#x963B;&#x585E;&#x961F;&#x5217;&#x8FDB;&#x884C;&#x963B;&#x585E;&#x7B49;&#x5F85;&#x3002;&#x901A;&#x8FC7;workQueue&#xFF0C;&#x7EBF;&#x7A0B;&#x6C60;&#x5B9E;&#x73B0;&#x4E86;&#x963B;&#x585E;&#x529F;&#x80FD;</p>
+</li>
+<li>RejectedExecutionHandler&#xFF08;&#x9971;&#x548C;&#x7B56;&#x7565;&#xFF09;
+&#x7EBF;&#x7A0B;&#x6C60;&#x7684;&#x9971;&#x548C;&#x7B56;&#x7565;&#xFF0C;&#x5F53;&#x963B;&#x585E;&#x961F;&#x5217;&#x6EE1;&#x4E86;&#xFF0C;&#x4E14;&#x6CA1;&#x6709;&#x7A7A;&#x95F2;&#x7684;&#x5DE5;&#x4F5C;&#x7EBF;&#x7A0B;&#xFF0C;&#x5982;&#x679C;&#x7EE7;&#x7EED;&#x63D0;&#x4EA4;&#x4EFB;&#x52A1;&#xFF0C;&#x5FC5;&#x987B;&#x91C7;&#x53D6;&#x4E00;&#x79CD;&#x7B56;&#x7565;&#x5904;&#x7406;&#x8BE5;&#x4EFB;&#x52A1;&#xFF0C;&#x7EBF;&#x7A0B;&#x6C60;&#x63D0;&#x4F9B;&#x4E86;5&#x79CD;&#x7B56;&#x7565;&#xFF1A;<ul>
+<li>&#xFF08;1&#xFF09;AbortPolicy&#xFF1A;&#x76F4;&#x63A5;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#xFF0C;&#x9ED8;&#x8BA4;&#x7B56;&#x7565;&#xFF1B;</li>
+<li>&#xFF08;2&#xFF09;CallerRunsPolicy&#xFF1A;&#x7528;&#x8C03;&#x7528;&#x8005;&#x6240;&#x5728;&#x7684;&#x7EBF;&#x7A0B;&#x6765;&#x6267;&#x884C;&#x4EFB;&#x52A1;&#xFF1B;</li>
+<li>&#xFF08;3&#xFF09;DiscardOldestPolicy&#xFF1A;&#x4E22;&#x5F03;&#x963B;&#x585E;&#x961F;&#x5217;&#x4E2D;&#x9760;&#x6700;&#x524D;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x5E76;&#x6267;&#x884C;&#x5F53;&#x524D;&#x4EFB;&#x52A1;&#xFF1B;</li>
+<li>&#xFF08;4&#xFF09;DiscardPolicy&#xFF1A;&#x76F4;&#x63A5;&#x4E22;&#x5F03;&#x4EFB;&#x52A1;&#xFF1B;</li>
+<li>&#xFF08;5&#xFF09;&#x5B9E;&#x73B0;RejectedExecutionHandler&#x63A5;&#x53E3;&#xFF0C;&#x81EA;&#x5B9A;&#x4E49;&#x9971;&#x548C;&#x7B56;&#x7565;</li>
+</ul>
+</li>
+</ol>
+<h3 id="&#x51E0;&#x79CD;&#x6392;&#x961F;&#x7684;&#x7B56;&#x7565;&#xFF1A;">&#x51E0;&#x79CD;&#x6392;&#x961F;&#x7684;&#x7B56;&#x7565;&#xFF1A;</h3>
+<ol>
+<li><p>&#x4E0D;&#x6392;&#x961F;&#xFF0C;&#x76F4;&#x63A5;&#x63D0;&#x4EA4;
+&#x5C06;&#x4EFB;&#x52A1;&#x76F4;&#x63A5;&#x4EA4;&#x7ED9;&#x7EBF;&#x7A0B;&#x5904;&#x7406;&#x800C;&#x4E0D;&#x4FDD;&#x6301;&#x5B83;&#x4EEC;&#xFF0C;&#x53EF;&#x4F7F;&#x7528;SynchronousQueue
+&#x5982;&#x679C;&#x4E0D;&#x5B58;&#x5728;&#x53EF;&#x7528;&#x4E8E;&#x7ACB;&#x5373;&#x8FD0;&#x884C;&#x4EFB;&#x52A1;&#x7684;&#x7EBF;&#x7A0B;&#xFF08;&#x5373;&#x7EBF;&#x7A0B;&#x6C60;&#x4E2D;&#x7684;&#x7EBF;&#x7A0B;&#x90FD;&#x5728;&#x5DE5;&#x4F5C;&#xFF09;&#xFF0C;&#x5219;&#x8BD5;&#x56FE;&#x628A;&#x4EFB;&#x52A1;&#x52A0;&#x5165;&#x7F13;&#x51B2;&#x961F;&#x5217;&#x5C06;&#x4F1A;&#x5931;&#x8D25;&#xFF0C;&#x56E0;&#x6B64;&#x4F1A;&#x6784;&#x9020;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x7EBF;&#x7A0B;&#x6765;&#x5904;&#x7406;&#x65B0;&#x6DFB;&#x52A0;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x52A0;&#x5165;&#x5230;&#x7EBF;&#x7A0B;&#x6C60;&#x4E2D;&#xFF08;corePoolSize--&gt;maximumPoolSize&#x6269;&#x5BB9;&#xFF09;
+Executors.newCachedThreadPool()&#x91C7;&#x7528;&#x7684;&#x4FBF;&#x662F;&#x8FD9;&#x79CD;&#x7B56;&#x7565;</p>
+</li>
+<li><p>&#x65E0;&#x754C;&#x961F;&#x5217;
+&#x53EF;&#x4EE5;&#x4F7F;&#x7528;LinkedBlockingQueue&#xFF08;&#x57FA;&#x4E8E;&#x94FE;&#x8868;&#x7684;&#x6709;&#x754C;&#x961F;&#x5217;&#xFF0C;FIFO&#xFF09;&#xFF0C;&#x7406;&#x8BBA;&#x4E0A;&#x662F;&#x8BE5;&#x961F;&#x5217;&#x53EF;&#x4EE5;&#x5BF9;&#x65E0;&#x9650;&#x591A;&#x7684;&#x4EFB;&#x52A1;&#x6392;&#x961F;&#xFF0C;&#x5C06;&#x5BFC;&#x81F4;&#x5728;&#x6240;&#x6709;corePoolSize&#x7EBF;&#x7A0B;&#x90FD;&#x5DE5;&#x4F5C;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x5C06;&#x65B0;&#x4EFB;&#x52A1;&#x52A0;&#x5165;&#x5230;&#x961F;&#x5217;&#x4E2D;&#x3002;&#x8FD9;&#x6837;&#xFF0C;&#x521B;&#x5EFA;&#x7684;&#x7EBF;&#x7A0B;&#x5C31;&#x4E0D;&#x4F1A;&#x8D85;&#x8FC7;corePoolSize&#xFF0C;&#x4E5F;&#x56E0;&#x6B64;&#xFF0C;maximumPoolSize&#x7684;&#x503C;&#x4E5F;&#x5C31;&#x65E0;&#x6548;&#x4E86;</p>
+</li>
+<li><p>&#x6709;&#x754C;&#x961F;&#x5217;
+&#x53EF;&#x4EE5;&#x4F7F;&#x7528;ArrayBlockingQueue&#xFF08;&#x57FA;&#x4E8E;&#x6570;&#x7EC4;&#x7ED3;&#x6784;&#x7684;&#x6709;&#x754C;&#x961F;&#x5217;&#xFF0C;FIFO&#xFF09;&#xFF0C;&#x5E76;&#x6307;&#x5B9A;&#x961F;&#x5217;&#x7684;&#x6700;&#x5927;&#x957F;&#x5EA6;
+&#x4F7F;&#x7528;&#x6709;&#x754C;&#x961F;&#x5217;&#x53EF;&#x4EE5;&#x9632;&#x6B62;&#x8D44;&#x6E90;&#x8017;&#x5C3D;&#xFF0C;&#x4F46;&#x4E5F;&#x4F1A;&#x9020;&#x6210;&#x8D85;&#x8FC7;&#x961F;&#x5217;&#x5927;&#x5C0F;&#x548C;maximumPoolSize&#x540E;&#xFF0C;&#x63D0;&#x4EA4;&#x7684;&#x4EFB;&#x52A1;&#x88AB;&#x62D2;&#x7EDD;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x6BD4;&#x8F83;&#x96BE;&#x8C03;&#x6574;&#x548C;&#x63A7;&#x5236;&#x3002;</p>
+</li>
+</ol>
+<h3 id="execute-&#x548C;-submit&#x63A5;&#x53E3;&#x7684;&#x533A;&#x522B;">execute &#x548C; submit&#x63A5;&#x53E3;&#x7684;&#x533A;&#x522B;</h3>
+<ol>
+<li>&#x63A5;&#x53D7;&#x53C2;&#x6570;&#xFF0C;&#x524D;&#x8005;&#x662F;Runnable&#x63A5;&#x53E3;&#xFF0C;&#x540E;&#x8005;&#x662F;Callable&#x63A5;&#x53E3;</li>
+<li>&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x524D;&#x8005;&#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x540E;&#x8005;&#x8FD4;&#x56DE;Futrue&#x5BF9;&#x8C61;</li>
+<li>&#x5904;&#x7406;&#x5F02;&#x5E38;</li>
+</ol>
+<h3 id="&#x7EBF;&#x7A0B;&#x6C60;&#x7EC8;&#x6B62;&#x7684;&#x65B9;&#x6CD5;">&#x7EBF;&#x7A0B;&#x6C60;&#x7EC8;&#x6B62;&#x7684;&#x65B9;&#x6CD5;</h3>
+<ol>
+<li>shutdown&#xFF0C; &#x5F53;&#x7EBF;&#x7A0B;&#x6C60;&#x8C03;&#x7528;&#x8BE5;&#x65B9;&#x6CD5;&#x65F6;,&#x7EBF;&#x7A0B;&#x6C60;&#x7684;&#x72B6;&#x6001;&#x5219;&#x7ACB;&#x523B;&#x53D8;&#x6210;SHUTDOWN&#x72B6;&#x6001;&#x3002;&#x6B64;&#x65F6;&#xFF0C;&#x5219;&#x4E0D;&#x80FD;&#x518D;&#x5F80;&#x7EBF;&#x7A0B;&#x6C60;&#x4E2D;&#x6DFB;&#x52A0;&#x4EFB;&#x4F55;&#x4EFB;&#x52A1;&#xFF0C;&#x5426;&#x5219;&#x5C06;&#x4F1A;&#x629B;&#x51FA;RejectedExecutionException&#x5F02;&#x5E38;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x6B64;&#x65F6;&#x7EBF;&#x7A0B;&#x6C60;&#x4E0D;&#x4F1A;&#x7ACB;&#x523B;&#x9000;&#x51FA;&#xFF0C;&#x76F4;&#x5230;&#x6DFB;&#x52A0;&#x5230;&#x7EBF;&#x7A0B;&#x6C60;&#x4E2D;&#x7684;&#x4EFB;&#x52A1;&#x90FD;&#x5DF2;&#x7ECF;&#x5904;&#x7406;&#x5B8C;&#x6210;&#xFF0C;&#x624D;&#x4F1A;&#x9000;&#x51FA;&#x3002; </li>
+<li>shutdownNow&#xFF0C;&#x6267;&#x884C;&#x8BE5;&#x65B9;&#x6CD5;&#xFF0C;&#x7EBF;&#x7A0B;&#x6C60;&#x7684;&#x72B6;&#x6001;&#x7ACB;&#x523B;&#x53D8;&#x6210;STOP&#x72B6;&#x6001;&#xFF0C;&#x5E76;&#x8BD5;&#x56FE;&#x505C;&#x6B62;&#x6240;&#x6709;&#x6B63;&#x5728;&#x6267;&#x884C;&#x7684;&#x7EBF;&#x7A0B;&#xFF0C;&#x4E0D;&#x518D;&#x5904;&#x7406;&#x8FD8;&#x5728;&#x6C60;&#x961F;&#x5217;&#x4E2D;&#x7B49;&#x5F85;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x5F53;&#x7136;&#xFF0C;&#x5B83;&#x4F1A;&#x8FD4;&#x56DE;&#x90A3;&#x4E9B;&#x672A;&#x6267;&#x884C;&#x7684;&#x4EFB;&#x52A1;&#x3002; &#x5B83;&#x8BD5;&#x56FE;&#x7EC8;&#x6B62;&#x7EBF;&#x7A0B;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x901A;&#x8FC7;&#x8C03;&#x7528;Thread.interrupt()&#x65B9;&#x6CD5;&#x6765;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x7EBF;&#x7A0B;&#x4E2D;&#x6CA1;&#x6709;sleep &#x3001;wait&#x3001;Condition&#x3001;&#x5B9A;&#x65F6;&#x9501;&#x7B49;&#x5E94;&#x7528;, interrupt()&#x65B9;&#x6CD5;&#x662F;&#x65E0;&#x6CD5;&#x4E2D;&#x65AD;&#x5F53;&#x524D;&#x7684;&#x7EBF;&#x7A0B;&#x7684;&#x3002;&#x6240;&#x4EE5;&#xFF0C;ShutdownNow()&#x5E76;&#x4E0D;&#x4EE3;&#x8868;&#x7EBF;&#x7A0B;&#x6C60;&#x5C31;&#x4E00;&#x5B9A;&#x7ACB;&#x5373;&#x5C31;&#x80FD;&#x9000;&#x51FA;&#xFF0C;&#x5B83;&#x53EF;&#x80FD;&#x5FC5;&#x987B;&#x8981;&#x7B49;&#x5F85;&#x6240;&#x6709;&#x6B63;&#x5728;&#x6267;&#x884C;&#x7684;&#x4EFB;&#x52A1;&#x90FD;&#x6267;&#x884C;&#x5B8C;&#x6210;&#x4E86;&#x624D;&#x80FD;&#x9000;&#x51FA;&#x3002;</li>
+</ol>
+<h2 id="fixedthreadpool">FixedThreadPool</h2>
+<p>&#x56FA;&#x5B9A;&#x7EBF;&#x7A0B;&#x6C60;&#x5927;&#x5C0F;&#x7684;&#xFF0C;&#x961F;&#x5217;&#x53EF;&#x4EE5;&#x662F;&#x6709;&#x754C;&#x4E5F;&#x53EF;&#x4EE5;&#x65E0;&#x754C;</p>
+<h2 id="cachedthreadpool">CachedThreadPool</h2>
+<p>&#x5927;&#x5C0F;&#x65E0;&#x754C;&#x7684;&#x7EBF;&#x7A0B;&#x6C60;&#xFF0C;&#x961F;&#x5217;&#x662F;&#x65E0;&#x754C;&#x7684;</p>
+<h2 id="singlethreadpool">SingleThreadPool</h2>
+<p>&#x7EBF;&#x7A0B;&#x6C60;&#x5927;&#x5C0F;&#x4E3A;1&#xFF0C;</p>
+<h2 id="scheduledthreadpool">ScheduledThreadPool</h2>
+<p>&#x6267;&#x884C;&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;&#x7684;&#x7EBF;&#x7A0B;&#x6C60;</p>
+
                                 
                                 </section>
                             
@@ -1464,7 +1520,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"线程池","level":"1.6.1","depth":2,"next":{"title":"并发工具类","level":"1.6.2","depth":2,"path":"threads/threadTools.md","ref":"threads/threadTools.md","articles":[]},"previous":{"title":"多线程","level":"1.6","depth":1,"path":"threads/thread.md","ref":"threads/thread.md","articles":[{"title":"线程池","level":"1.6.1","depth":2,"path":"threads/threadPool.md","ref":"threads/threadPool.md","articles":[]},{"title":"并发工具类","level":"1.6.2","depth":2,"path":"threads/threadTools.md","ref":"threads/threadTools.md","articles":[]}]},"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"threads/threadPool.md","mtime":"2018-03-15T15:33:54.938Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2018-03-17T14:31:04.270Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"线程池","level":"1.6.1","depth":2,"next":{"title":"并发工具类","level":"1.6.2","depth":2,"path":"threads/threadTools.md","ref":"threads/threadTools.md","articles":[]},"previous":{"title":"多线程","level":"1.6","depth":1,"path":"threads/thread.md","ref":"threads/thread.md","articles":[{"title":"线程池","level":"1.6.1","depth":2,"path":"threads/threadPool.md","ref":"threads/threadPool.md","articles":[]},{"title":"并发工具类","level":"1.6.2","depth":2,"path":"threads/threadTools.md","ref":"threads/threadTools.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"threads/threadPool.md","mtime":"2018-03-18T13:25:17.000Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2018-03-18T13:53:45.604Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
