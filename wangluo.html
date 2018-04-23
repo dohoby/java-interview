@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="" >
     <head>
-        <title>网络 · GitBook</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>网络 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.1.1">
+        <meta name="generator" content="GitBook 3.2.3">
         
         
         
@@ -1570,10 +1570,19 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x7F51;&#x7EDC;&#x76F8;&#x5173;&#x77E5;&#x8BC6;&#xFF0C;http&#xFF0C;tcp&#x7B49;&#x7B49;&#x3002;">&#x7F51;&#x7EDC;&#x76F8;&#x5173;&#x77E5;&#x8BC6;&#xFF0C;http&#xFF0C;tcp&#x7B49;&#x7B49;&#x3002;</h1>
+<h2 id="pc&#x4E00;&#x6B21;&#x8BF7;&#x6C42;&#x7684;&#x6D41;&#x7A0B;">pc&#x4E00;&#x6B21;&#x8BF7;&#x6C42;&#x7684;&#x6D41;&#x7A0B;</h2>
+<ol>
+<li>&#x6839;&#x636E;&#x57DF;&#x540D;&#x627E;&#x670D;&#x52A1;&#x5668;ip&#xFF0C;&#x9996;&#x5148;&#x6839;&#x636E;host&#x5224;&#x65AD;&#xFF0C;&#x5982;&#x679C;host&#x5B58;&#x5728;&#xFF0C;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x8BE5;ip&#x3002;</li>
+<li>&#x5982;&#x679C;host&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x8D70;dns&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x7535;&#x8111;&#x914D;&#x7F6E;&#x7684;dns&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x914D;&#x7F6E;&#x8D70;&#x9ED8;&#x8BA4;&#x7684;dns&#xFF0C;&#x4E00;&#x822C;&#x662F;&#x8FD0;&#x8425;&#x5546;&#x7684;dns&#x670D;&#x52A1;&#x5668;&#x3002;</li>
+<li>&#x901A;&#x8FC7;dns&#x627E;&#x5230;ip&#xFF0C;&#x8BBF;&#x95EE;ip&#xFF0C;&#x8FDB;&#x884C;tcp&#x63E1;&#x624B;&#x7B49;&#x64CD;&#x4F5C;&#x3002;</li>
+</ol>
 <h2 id="tcp&#x8FDE;&#x63A5;">tcp&#x8FDE;&#x63A5;</h2>
-<p>tcp&#x7684;&#x4E09;&#x6B21;&#x63E1;&#x624B;,&#x4E24;&#x6B21;&#x6325;&#x624B;</p>
+<p><img src="images/tcp-connect.png" alt="tcp&#x8FDE;&#x63A5;">
+tcp&#x7684;&#x4E09;&#x6B21;&#x63E1;&#x624B;,&#x56DB;&#x6B21;&#x6325;&#x624B;</p>
 <h2 id="udp&#x8FDE;&#x63A5;">udp&#x8FDE;&#x63A5;</h2>
 <h2 id="tcp&#x548C;udp&#x7684;&#x533A;&#x522B;">tcp&#x548C;udp&#x7684;&#x533A;&#x522B;</h2>
+<p>tcp&#x662F;&#x6709;&#x72B6;&#x6001;&#x7684;&#x8FDE;&#x63A5;&#xFF0C;&#x6027;&#x80FD;&#x4F4E;</p>
+<p>udp&#x662F;&#x65E0;&#x72B6;&#x6001;&#x7684;&#x8FDE;&#x63A5;&#xFF0C;&#x6027;&#x80FD;&#x9AD8;</p>
 <h2 id="http&#x72B6;&#x6001;&#x7801;&#x8BE6;&#x89E3;">http&#x72B6;&#x6001;&#x7801;&#x8BE6;&#x89E3;</h2>
 <p>500: &#x670D;&#x52A1;&#x5F02;&#x5E38;
 501: &#x670D;&#x52A1;&#x5668;&#x8FD8;&#x662F;&#x4E0D;&#x5177;&#x6709;&#x8BF7;&#x6C42;&#x529F;&#x80FD;&#x7684;
@@ -1591,6 +1600,8 @@
 <h2 id="http&#x548C;https&#x7684;&#x533A;&#x522B;&#xFF1F;">http&#x548C;https&#x7684;&#x533A;&#x522B;&#xFF1F;</h2>
 <h2 id="websocket&#x5982;&#x4F55;&#x63E1;&#x624B;&#x5347;&#x7EA7;&#xFF1F;">websocket&#x5982;&#x4F55;&#x63E1;&#x624B;&#x5347;&#x7EA7;&#xFF1F;</h2>
 <h2 id="https&#x8BA4;&#x8BC1;&#x8FC7;&#x7A0B;">https&#x8BA4;&#x8BC1;&#x8FC7;&#x7A0B;</h2>
+<h2 id="http2&#x534F;&#x8BAE;">http2&#x534F;&#x8BAE;</h2>
+<h2 id="http2&#x548C;http1&#x7684;&#x533A;&#x522B;">http2&#x548C;http1&#x7684;&#x533A;&#x522B;</h2>
 <blockquote>
 <p>&#x53C2;&#x8003;&#x300A;tcp-ip&#x8BE6;&#x89E3;&#x300B;&#xFF0C;&#x300A;http&#x6743;&#x5A01;&#x6307;&#x5357;&#x300B;</p>
 </blockquote>
@@ -1637,7 +1648,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"网络","level":"1.21","depth":1,"next":{"title":"编程思想相关","level":"1.22","depth":1,"path":"thinkInDeep.md","ref":"thinkInDeep.md","articles":[]},"previous":{"title":"查找算法","level":"1.20.3","depth":2,"path":"algorithm/search.md","ref":"algorithm/search.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"wangluo.md","mtime":"2018-04-12T17:06:26.200Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2018-04-15T14:32:38.308Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"网络","level":"1.21","depth":1,"next":{"title":"编程思想相关","level":"1.22","depth":1,"path":"thinkInDeep.md","ref":"thinkInDeep.md","articles":[]},"previous":{"title":"查找算法","level":"1.20.3","depth":2,"path":"algorithm/search.md","ref":"algorithm/search.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"wangluo.md","mtime":"2018-04-23T15:06:17.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-23T15:08:11.534Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
